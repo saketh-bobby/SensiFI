@@ -8,4 +8,21 @@ html
     script(src="/javascripts/jquery.min.js")
     script(src="/javascripts/bootstrap.min.js")
   body
-    block content
+    .navbar.navbar-default.navbar-fixed-top
+        .container
+            .navbar-header
+                a.navbar-brand(href="/") SensiFI
+                button.navbar-toggle(type="button", data-collapse="collapse", data-target="#navbar-main")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+            #navbar-main.navbar-collapse.collapse
+                    ul.nav.navbar-nav
+                        li
+                            a(href="/about/") About
+    .container
+        block content
+    footer
+        .row
+            .col-xs-12
+                small &copy; @socket_var 2017

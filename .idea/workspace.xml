@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="312cfae0-843d-4a09-a462-9ca1d779a506" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/views/_includes/starMixin.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/locations.js" afterPath="$PROJECT_DIR$/server/controllers/locations.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/others.js" afterPath="$PROJECT_DIR$/server/controllers/others.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/generic-text.jade" afterPath="$PROJECT_DIR$/server/views/generic-text.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/location-info.jade" afterPath="$PROJECT_DIR$/server/views/location-info.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/location-review-form.jade" afterPath="$PROJECT_DIR$/server/views/location-review-form.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/locations-list.jade" afterPath="$PROJECT_DIR$/server/views/locations-list.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,17 +31,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="others.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="others.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/controllers/others.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="116">
+              <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generic-text.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generic-text.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/views/generic-text.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
@@ -127,8 +121,8 @@
         <option value="$PROJECT_DIR$/server/views/location-info.jade" />
         <option value="$PROJECT_DIR$/server/views/location-review-form.jade" />
         <option value="$PROJECT_DIR$/server/controllers/locations.js" />
-        <option value="$PROJECT_DIR$/server/controllers/others.js" />
         <option value="$PROJECT_DIR$/server/views/generic-text.jade" />
+        <option value="$PROJECT_DIR$/server/controllers/others.js" />
       </list>
     </option>
   </component>
@@ -423,12 +417,12 @@
       <option name="presentableId" value="Default" />
       <updated>1488206151561</updated>
       <workItem from="1488206153657" duration="7424000" />
-      <workItem from="1488262661950" duration="12482000" />
+      <workItem from="1488262661950" duration="12726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19906000" />
+    <option name="totallyTimeSpent" value="20150000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -443,7 +437,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -609,14 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/locations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/views/location-review-form.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="636">
@@ -625,10 +611,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/others.js">
+    <entry file="file://$PROJECT_DIR$/server/controllers/locations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="607">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -637,6 +623,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/others.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
           <folding />
         </state>
       </provider>

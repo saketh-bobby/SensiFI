@@ -19,6 +19,7 @@
     "mongoose": "^4.8.5",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
-    "request": "latest"
+    "request": "latest",
+    "bower":"1.7.9"
   }
 }

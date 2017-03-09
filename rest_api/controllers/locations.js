@@ -28,7 +28,7 @@ exports.locationsListByDistance = function (req, res) {
 	};
 	var geoOptions = {
 		spherical: true,
-		maxDistance: theEarth.getRadsFromDistance(20),
+		maxDistance: theEarth.getRadsFromDistance(req.query.maxDistance),
 		num: 10
 	};
 	if (!lng || !lat) {
@@ -103,7 +103,7 @@ exports.locationsReadOne        = function (req, res) {
 
 };
 exports.locationsUpdateOne      = function (req, res) {
-	if(!req.params.locationid) {
+	if (!req.params.locationid) {
 		sendJsonResponse(res, 404, {
 			"message": "Not found, locationid is required"
 		});
@@ -113,18 +113,18 @@ exports.locationsUpdateOne      = function (req, res) {
 		.findById(req.params.locationid)
 		.select("-reviews -rating")
 		.exec(
-			function(err,location){
-				if(err){
-					sendJsonResponse(res,404,err);
+			function (err, location) {
+				if (err) {
+					sendJsonResponse(res, 404, err);
 					return;
-				} else if(!location){
-					sendJsonResponse(res,400,{"message":"locationid not found"});
+				} else if (!location) {
+					sendJsonResponse(res, 400, {"message": "locationid not found"});
 					return;
 				}
-				location.name = req.body.name;
-				location.address = req.body.address;
-				location.facilities = req.body.facilities.split(",");
-				location.coords = [parseFloat(req.body.lng), parseFloat(req.body.lat)];
+				location.name         = req.body.name;
+				location.address      = req.body.address;
+				location.facilities   = req.body.facilities.split(",");
+				location.coords       = [parseFloat(req.body.lng), parseFloat(req.body.lat)];
 				location.openingTimes = [{
 					days: req.body.days1,
 					opening: req.body.opening1,
@@ -137,7 +137,7 @@ exports.locationsUpdateOne      = function (req, res) {
 					closed: req.body.closed2,
 				}];
 
-				location.save(function(err, location) {
+				location.save(function (err, location) {
 					if (err) {
 						sendJsonResponse(res, 404, err);
 					} else {
@@ -147,13 +147,13 @@ exports.locationsUpdateOne      = function (req, res) {
 			}
 		);
 };
-exports.locationsDeleteOne      = function (req,res) {
+exports.locationsDeleteOne      = function (req, res) {
 	var locationid = req.params.locationid;
 	if (locationid) {
 		Location
 			.findByIdAndRemove(locationid)
 			.exec(
-				function(err, location) {
+				function (err, location) {
 					if (err) {
 						sendJsonResponse(res, 404, err);
 						return;

@@ -55,6 +55,7 @@ function doAddReview(req, res, location) {
 
 	location.save(function(err,location){
 		if(err) {
+			console.log(err);
 			sendJsonResponse(res,400,err);
 		} else {
 			updateAvgRating(location._id);
@@ -67,7 +68,7 @@ exports.reviewsCreate = function(req,res){
 	if(locationid) {
 		Location
 			.findById(locationid)
-			.select(reviews)
+			.select("reviews")
 			.exec(function(err,location){
 				if(err) {
 					sendJsonResponse(res,404,err);

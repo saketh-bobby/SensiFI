@@ -1,3 +1,8 @@
+exports.angularApp = function(req,res){
+	res.render("layout",{
+		title:"SensiFI"
+	});
+};
 exports.about = function(req,res){
 	res.render("generic-text",
 		{

@@ -5,6 +5,8 @@ var apiOptions = {
 if (process.env.NODE_ENV === 'production') {
 	apiOptions.server = "http://warm-castle-28369.heroku.com";
 }
+
+
 exports.homeList = function(req,res){
 	var url = apiOptions.server + "/api/locations";
 	var options = {

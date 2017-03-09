@@ -1,32 +1,40 @@
 doctype html
 html(ng-app="SensiFI")
-  head
-    title= title
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel='stylesheet', href='/stylesheets/amelia.bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    head
+        title= title
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet', href='/vendors/bootstrap/amelia.bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
 
-  body
-    .navbar.navbar-default.navbar-fixed-top
-        .container
-            .navbar-header
-                a.navbar-brand(href="/") SensiFI
-                button.navbar-toggle(type="button", data-collapse="collapse", data-target="#navbar-main")
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-            #navbar-main.navbar-collapse.collapse
+    body
+        .navbar.navbar-default.navbar-fixed-top
+            .container
+                .navbar-header
+                    a.navbar-brand(href="/") SensiFI
+                    button.navbar-toggle(type="button", data-collapse="collapse", data-target="#navbar-main")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                #navbar-main.navbar-collapse.collapse
                     ul.nav.navbar-nav
                         li
                             a(href="/about/") About
-    .container
-        block content
-    footer.container
-        .row
-            .col-xs-12
-                small &copy; @socket_var 2017
-      script(src="/javascripts/jquery.min.js")
-      script(src="/javascripts/bootstrap.min.js")
-      script(src="/vendors/angular/angular.js")
-      script(src="/javascripts/validation.js")
-      script(src="/javascripts/app.js")
+        .container
+            div(ng-view)
+                block content
+        footer.container
+            .row
+                .col-xs-12
+                    small &copy; @socket_var 2017
+        script(src="/vendors/jquery/jquery.min.js")
+        script(src="/vendors/bootstrap/bootstrap.min.js")
+        script(src="/vendors/angular/angular.js")
+        script(src="/vendors/angular-route/angular-route.js")
+        script(src="/javascripts/validation.js")
+        script(src="/app.js")
+        script(src="/controllers/home.controller.js")
+        script(src="/services/sensiData.service.js")
+        script(src="/services/geolocation.service.js")
+        script(src="/filters/formatDistance.filter.js")
+        script(src="/directives/ratingStars/ratingStars.directive.js")
+

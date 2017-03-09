@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'production') {
 var _formatDistance = function (distance) {
 	var numDistance, unit;
 	if (distance > 1) {
-		numDistance = parseFloat(distance).toFixed(1);
+		numDistance = parseInt(distance).toFixed(1);
 		unit = 'km';
 	} else {
 		numDistance = parseInt(distance * 1000,10);
@@ -42,6 +42,7 @@ exports.homeList = function(req,res){
 		if (response.statusCode === 200 && data.length) {
 			for (i=0; i<data.length; i++) {
 				data[i].distance = _formatDistance(data[i].distance);
+				data[i].rating = parseInt(data[i].rating);
 			}
 		}
 		res.render("locations-list",
@@ -88,6 +89,7 @@ function getLocationInfo(req,res,callback){
 					lng: body.coords[0],
 					lat: body.coords[1]
 				};
+				data.rating = parseInt(body.rating);
 				callback(req, res, data);
 			} else {
 				_showError(req, res, response.statusCode);
@@ -144,7 +146,7 @@ exports.doAddReview = function(req,res){
 		method:"POST",
 		json:postData
 	};
-	if (!postdata.author || !postdata.rating || !postdata.reviewText) {
+	if (!postData.author || !postData.rating || !postData.reviewText) {
 		res.redirect('/location/' + locationid + '/reviews/new?err=val');
 	} else{
 		request(requestOptions,function(err,response,body){

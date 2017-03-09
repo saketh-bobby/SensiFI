@@ -5,17 +5,6 @@ var apiOptions = {
 if (process.env.NODE_ENV === 'production') {
 	apiOptions.server = "http://warm-castle-28369.heroku.com";
 }
-var _formatDistance = function (distance) {
-	var numDistance, unit;
-	if (distance > 1) {
-		numDistance = parseInt(distance).toFixed(1);
-		unit = 'km';
-	} else {
-		numDistance = parseInt(distance * 1000,10);
-		unit = 'm';
-	}
-	return numDistance + unit;
-};
 exports.homeList = function(req,res){
 	var url = apiOptions.server + "/api/locations";
 	var options = {
@@ -41,7 +30,6 @@ exports.homeList = function(req,res){
 		data = responseBody;
 		if (response.statusCode === 200 && data.length) {
 			for (i=0; i<data.length; i++) {
-				data[i].distance = _formatDistance(data[i].distance);
 				data[i].rating = parseInt(data[i].rating);
 			}
 		}
@@ -52,8 +40,11 @@ exports.homeList = function(req,res){
 					title:"SensiFI",
 					strapline:"Find places to work with wifi near you"
 				},
-				locations: data,
-				message:message
+				// locations: data,
+				message:message,
+				sidebar: "Looking for wifi and a seat? Loc8r helps you find places to " +
+				"work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r " +
+				"help you find the place you're looking for."
 			}
 		);
 	}
@@ -124,7 +115,8 @@ function renderReviewForm(req, res, locDetail) {
 	res.render('location-review-form', {
 		title: 'Review '+ locDetail.name + 'on SensiFI',
 		pageHeader: { title: 'Review '+locDetail.name },
-		error: req.query.err
+		error: req.query.err,
+		url:req.originalUrl
 	});
 }
 exports.addReview = function(req,res){
@@ -159,5 +151,4 @@ exports.doAddReview = function(req,res){
 			}
 		});
 	}
-
 };

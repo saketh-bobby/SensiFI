@@ -33,7 +33,6 @@ function updateAvgRating(id) {
 		.findById(id)
 		.select("rating reviews")
 		.exec(function(err,location){
-			console.log(location);
 			if(!err){
 				doSetAvgRating(location);
 			}

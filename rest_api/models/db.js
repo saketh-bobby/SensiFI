@@ -3,7 +3,7 @@ var readline = require("readline");
 var dbURL = "mongodb://localhost/sensiFI";
 
 if (process.env.NODE_ENV === 'production') {
-	dbURI = process.env.MONGOLAB_URI;
+	dbURL = process.env.MONGOLAB_URI;
 }
 
 mongoose.connect(dbURL);
